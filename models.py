@@ -26,6 +26,11 @@ def insert_employer(new_data: tuple, con):
     con.commit()
     return 'Данные добавлены'
 
+def delete_emp(con, id_str):
+    cur = con.cursor()
+    cur.execute(f"DELETE FROM staff WHERE id = {id_str}")
+    con.commit()
+    return 'Данные обновлены'
 
 def print_all(con):
     cur = con.cursor()
@@ -74,3 +79,4 @@ def change_sal(con, id_str, zp_str):
     cur.execute(f"UPDATE staff SET salary = {zp_str} WHERE id = {id_str}")
     con.commit()
     return f'Изменили заработную плату'
+

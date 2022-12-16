@@ -6,6 +6,7 @@ def inp_menu():
 # 4 найти по должности
 # 5 изменить зарплату
 # 6 общий фонд з/п
+# 7 удаление сотрудника
 # 0 выход
 
 ''')
@@ -41,3 +42,8 @@ def change_salary():
 
 def print_data(inp_str):
     print(inp_str)
+
+
+def delete_worker():
+    id_worker = input('Введите id сотрудника, которого хотите удалить: ')
+    return id_worker

@@ -1,7 +1,6 @@
 from view import *
 from models import *
 
-
 def menu():
     con = create_db()
     while True:
@@ -30,6 +29,12 @@ def menu():
         elif user_choice == '6':
             d_zp = data_zp(con)
             print_data(d_zp)
+        elif user_choice == '7':
+            p_all = print_all(con)
+            print_data(p_all)
+            delete_work = delete_worker()
+            del_emp = delete_emp(con, *delete_work)
+            print(del_emp)
         elif user_choice == '0':
             print('До свидания')
             break
