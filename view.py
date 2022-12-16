@@ -33,7 +33,6 @@ def find_position():
     position = input('Введите должность: ')
     return position
 
-
 def change_salary():
     id_worker = input('Введите id сотрудника, которого хотите найти: ')
     new_salary = int(input('Введите новую заработную плату: '))
